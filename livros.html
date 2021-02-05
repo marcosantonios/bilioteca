@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+ <head>
+  <title> livros </title>
+  <link a href="estilo.css" rel="stylesheet" type="text/css" />
+
+  <script>
+
+  function abrirpdf(){
+  window.open("1.pdf");
+  }
+
+  </script>
+
+  <style>
+
+   *{
+   margin:0;
+   padding: 0;
+   }
+
+   .menu{
+   width: 100%;
+   height: 50px;
+   background-color: #222;
+   font-family: 'Arial';
+   }
+
+   .menu ul{
+   list-style:none;
+   position: relative;
+   }
+
+   .menu ul li{
+   width: 150px;
+   float: left;
+   }
+
+   .menu a{
+   padding: 15px;
+   display: block;
+   text-decoration: none;
+   text-align: center;
+   background-color: #222;
+   color: #fff;
+   }
+
+   .menu ul ul{
+   position: absolute;
+   visibility: hidden;
+   }
+
+   .menu ul li:hover ul{
+   visibility: visible;
+   }
+
+   .menu a:hover{
+   background-color: #f4f4f4;
+   color: #555;
+   }
+
+   .menu ul ul li{
+   float: none;
+   border-bottom: solid 1px #ccc;
+   }
+
+   label[for="bt_menu"]{
+   padding: 5px;
+   background-color: #222;
+   color: #fff;
+   font-family: 'Arial';
+   text-align: center;
+   font-size: 30px;
+   cursor: pointer;
+   width: 50px;
+   height: 50px;
+   }
+   #bt_menu{
+   display: none;
+   }
+
+   label[for="bt_menu"]{
+   display: none;
+   }
+
+   @media(max-width: 800px){
+   label[for="bt_menu"]{
+     display: block;
+    }
+
+   #bt_menu:checked ~ .menu{
+    margin-left: 0;
+    }
+
+    .menu{
+    margin-top: 5px;
+    margin-left: -100%;
+    transition: all .4s;
+    }
+
+    .menu ul li{
+    width: 100%;
+    float: none;
+    }
+
+    .menu ul ul{
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .4s;
+    }
+
+    .menu ul li:hover ul{
+    height: auto;
+    max-height: 200px;
+    }
+   }
+
+   .button{
+   background-color: #bbbbbb;
+   color: #000000;
+   }
+
+   .button:hover{
+   background-color: #ffffff;
+   color: #000000;
+   }
+
+   .button:active{
+   background-color: #000000;
+   color: #ffffff;
+   }
+
+  </style>
+ </head>
+ <body background="fundo.jpg">
+
+  <input type="checkbox" id="bt_menu">
+  <label for="bt_menu">&#9776;</label>
+
+ <nav class="menu">
+  <ul>
+   <li><a href="página1.html">Home</a></li>
+
+   <li><a href="livros.html">Livro</a>
+    <ul>
+      <li><a href="livros.html">Escolher livros</a></li>
+    </ul>
+   </li>
+
+   <li><a href="página1.html">sobre</a>
+    <ul>
+      <li><a href="#">Sobre o autor dos livros</a></li>
+      <li><a href="página1.html">Sobre o criador do site</a></li>
+    </ul>
+   </li>
+
+  </ul>
+ </nav>
+
+  <h2> Livros disponiveis </h2>
+   <hr style="background-color:#000000;height:2px;"/>
+
+<header>
+ <div class="div-geral">
+
+   <div class="div-img">
+  <img src="capapdf.jpg" class="borda1" width="230" />
+   </div>
+
+  <div class="div-text">
+    <h1>O espelho</h1>
+     <h3> Sinópse: </h3>
+      <p> Esse livro conta a história sobre um homem muinto rico que tem o costume de ir a leilões,
+          mas certo dia ele participa de um leilão e compra um espelho que acaba por desfragmentar sua realidade,
+          fazendo que ele passe de um homem rico para um pé rapado.</p>
+      <hr style="background-color:#000000;height:2px"/>
+          <p>Clique no botão para abrir o pdf:</p>
+        <input type="button" style="width:100px; height:30px" value="abrir pdf" onClick ="abrirpdf()" class="button" />
+  </div>
+ </div>
+</header>
+
+<br/>
+
+<hr style="background-color:#000000;height:2px"/>
+
+ </body>
+</html>
